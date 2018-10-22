@@ -4,16 +4,13 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
-    "faker": "^4.1.0",
     "lodash": "^4.17.11",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-redux": "^5.0.7",
     "react-scripts": "2.0.5",
     "redux": "^4.0.1",
-    "redux-thunk": "^2.3.0",
-    "shortid": "^2.2.13",
-    "txtgen": "^2.2.2"
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",

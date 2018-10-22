@@ -4,6 +4,7 @@
 //=============================================================================
 
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import EntryForm from './EntryForm';
 import Vertical from './Vertical';
 import Horizontal from './Horizontal';
@@ -20,17 +21,18 @@ class Main extends Component {
         </main>
       );
     }
-  }
+}
 
-  const mapStoreToProps = (store) => {
-    return {
-      horizontal: store.horizontal,
-      vertical: store.vertical
-    }
+Main.prototypes = {
+  horizontal: PropTypes.array.isRequired,
+  vertical: PropTypes.array.isRequired
+}
+
+const mapStateToProps = (state) => {
+  return {
+    horizontal: state.horizontal,
+    vertical: state.vertical
   }
+}
   
-  const mapDispatchToProps = (dispatch) =>{
-    return {}
-  }
-  
-  export default connect(mapStoreToProps, mapDispatchToProps)(Main);
+export default connect(mapStateToProps, null)(Main);

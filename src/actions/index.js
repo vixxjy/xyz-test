@@ -3,7 +3,6 @@
 */
 //=============================================================================
 
-
 import axios from 'axios';
 import {COMPUTE_VERTICAL_SUCCESS, COMPUTE_HORIZONTAL_SUCCESS} from "../constants/index";
 

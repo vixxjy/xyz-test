@@ -4,6 +4,7 @@
 //=============================================================================
 
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { compute } from '../actions';
 import { connect } from 'react-redux';
 
@@ -19,6 +20,10 @@ class EntryForm extends Component {
             checkedUnion: true,
             checkedNonUnion: false
         };
+
+        this.handleChange = this.handleChange.bind(this);
+        this.handleRadioChange = this.handleRadioChange.bind(this);
+        this.submit = this.submit.bind(this);
     }
 
     handleChange = (event) => {
@@ -29,14 +34,14 @@ class EntryForm extends Component {
 
     handleRadioChange = (event) => {
         console.log(event.target)
-        if(event.target.id == "one"){
+        if (event.target.id === "one") {
             this.setState({
                 union: true,
                 checkedUnion: true,
                 checkedNonUnion: false
             })
         }
-        if(event.target.id == "two"){
+        if (event.target.id === "two") {
             this.setState({
                 union: false,
                 checkedUnion: false,
@@ -46,6 +51,7 @@ class EntryForm extends Component {
     }
     
     submit = (e) => {
+        e.preventDefault();
         let dataToSend = {
             calculator_type: this.state.calculator_type,
             union: this.state.union,
@@ -67,7 +73,7 @@ class EntryForm extends Component {
                     </p>
                     <div className='switcher'>
                         <div className='switcher-item'>
-                            <input id='one' name='switcher'  type='radio' value={this.state.location} checked={this.state.checkedUnion}  onClick={this.handleRadioChange} />
+                            <input id='one' name='switcher' type='radio' value={this.state.location} checked={this.state.checkedUnion}  onClick={this.handleRadioChange} />
                             <label for='one'>Union</label>
                         </div>
                         <div className='switcher-item'>
@@ -106,15 +112,15 @@ class EntryForm extends Component {
     }
 }
 
-    const mapDispatchToProps = (dispatch) => {
-        return {
-            computez: (data) => dispatch(compute(data)),
-        }
-        
-    }
-  
-    const mapStoreToProps = (store) => {
-        return {}
-    }
+EntryForm.prototypes = {
+    compute: PropTypes.func.isRequired
+}
 
-export default connect(mapStoreToProps, mapDispatchToProps) (EntryForm);
+const mapDispatchToProps = (dispatch) => {
+    return {
+        computez: (data) => dispatch(compute(data)),
+    }
+    
+}
+
+export default connect(null, mapDispatchToProps)(EntryForm);

@@ -2,8 +2,9 @@
  * created by Ajor on 21-10-2018
 */
 //=============================================================================
+import {COMPUTE_VERTICAL_SUCCESS} from "../constants/index";
 
-export default (state = {
+const initialState = {
     NG_LC:0,
     NG_LC_EXT:0,
     CP_LC:0,
@@ -20,9 +21,11 @@ export default (state = {
     NG_LC_EXT_SF_MT:0,
     CP_LC_SF_MT:0,
     CP_LC_EXT_SF_MT:0, 
-}, action) => {
+};
+
+export default (state = initialState, action) => {
     switch (action.type) {
-        case "COMPUTE_VERTICAL_SUCCESS":
+        case COMPUTE_VERTICAL_SUCCESS:
           let response = action.payload;
      
           return {
