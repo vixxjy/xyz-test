@@ -1,3 +1,8 @@
+/**
+ * created by Ajor on 21-10-2018
+*/
+//=============================================================================
+
 import React, { Component } from 'react';
 import { compute } from '../actions';
 import { connect } from 'react-redux';
@@ -21,6 +26,7 @@ class EntryForm extends Component {
             [event.target.name]: event.target.value
         });
     }
+
     handleRadioChange = (event) => {
         console.log(event.target)
         if(event.target.id == "one"){
@@ -37,20 +43,16 @@ class EntryForm extends Component {
                 checkedNonUnion: true
             })
         }
-        // this.setState({
-        //     [event.target.name]: event.target.value
-        // });
     }
     
     submit = (e) => {
-        console.log(this.state);
         let dataToSend = {
             calculator_type: this.state.calculator_type,
             union: this.state.union,
             location: this.state.location,
             square_footage: this.state.square_footage,
         }
-        // this.props.computez(this.state);
+
         this.props.computez(dataToSend);
     }
 
@@ -58,7 +60,7 @@ class EntryForm extends Component {
         return (
             <div className="uk-container uk-padding-remove-horizontal row">
             <div
-                    className="uk-card align-items-center w-100 uk-card-default uk-card-body uk-padding-small flex flex-between uk-width-1-1@m">
+                className="uk-card align-items-center w-100 uk-card-default uk-card-body uk-padding-small flex flex-between uk-width-1-1@m">
                 <div className="pt-20">
                     <p>
                         Labor type:
@@ -104,17 +106,15 @@ class EntryForm extends Component {
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-      computez: (data) => dispatch(compute(data)),
+    const mapDispatchToProps = (dispatch) => {
+        return {
+            computez: (data) => dispatch(compute(data)),
+        }
+        
     }
-    
-  }
   
-  const mapStoreToProps = (store) => {
-    return {
-      
+    const mapStoreToProps = (store) => {
+        return {}
     }
-  }
 
 export default connect(mapStoreToProps, mapDispatchToProps) (EntryForm);

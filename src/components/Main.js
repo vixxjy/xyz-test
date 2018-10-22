@@ -11,10 +11,6 @@ import { connect } from 'react-redux';
 
 class Main extends Component {
 
-  componentWillReceiveProps(nextProps){
-    console.log(this.props.horizontal)
-    console.log(this.props.vertical)
-  }
     render() {
       return (
         <main className="p-5 uk-padding-remove-horizontal">
@@ -34,9 +30,7 @@ class Main extends Component {
   }
   
   const mapDispatchToProps = (dispatch) =>{
-    return {
-  
-    }
+    return {}
   }
   
-  export default connect(mapStoreToProps, mapDispatchToProps) (Main);
+  export default connect(mapStoreToProps, mapDispatchToProps)(Main);

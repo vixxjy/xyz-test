@@ -1,7 +1,12 @@
+/**
+ * created by Ajor on 22-10-2018
+*/
+//=============================================================================
+
 import React, { Component } from 'react';
 
 class Vertical extends Component {
-    state = {  }
+
     render() {
         const {
             CP_LC, 

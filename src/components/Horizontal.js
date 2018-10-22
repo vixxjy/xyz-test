@@ -1,7 +1,12 @@
+/**
+ * created by Ajor on 22-10-2018
+*/
+//=============================================================================
+
 import React, { Component } from 'react';
 
 class Horizontal extends Component {
-    state = {  }
+
     render() {
         const {
             NG_LC_HR,
