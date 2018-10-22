@@ -1,0 +1,490 @@
+html{
+    box-sizing: border-box;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden ;
+}
+
+*{
+    box-sizing: inherit;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    border-top: solid 8px #edcd2d;
+    background: #edeeee;
+}
+
+.card-red{
+    border-top: solid 10px #d82033;
+    background: #f9fafa;
+    box-shadow: 0 0 20px -5px;
+}
+
+.card-yellow{
+    border-top: solid 10px #edcd2d;
+    background: #f9fafa;
+    box-shadow: 0 0 20px -5px;
+}
+
+.card-red .table-head{
+    background: #d82033;
+    height: 50px;
+    padding-left: 40px;
+}
+
+.card-yellow .table-head{
+    background: #edcd2d;
+    height: 50px;
+    padding-left: 40px;
+}
+
+.card-red .table-head h3{
+    color: #ffffff;
+    margin: 0;
+}
+
+.card-yellow .table-head h3{
+    color: #ffffff;
+    margin: 0;
+}
+
+.uk-card .table{
+    padding-left: 40px;
+    padding-top: 40px;
+    position: relative;
+}
+
+.cards-container > .col-md-6{
+    padding-top: 40px;
+}
+
+.table .left{
+    position: absolute;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    bottom: 0;
+    height: 100%;
+    left: 10px;
+}
+
+.uk-card table td{
+    padding: 60px;
+    text-align: center;
+    font-size: 20px;
+    border: none;
+}
+
+tr:nth-of-type(1) td:nth-of-type(1){
+    border-right: solid 1px black;
+    border-bottom: solid 1px black;
+}
+tr:nth-of-type(1) td:nth-of-type(2){
+    border-bottom: solid 1px black;
+}
+
+tr:nth-of-type(2) td:nth-of-type(1){
+    border-right: solid 1px black;
+}
+
+.uk-card table{
+    border-radius: 15px;
+    overflow: hidden;
+    border-collapse: separate;
+}
+
+.cards-container{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.cards-container .uk-card{
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+@keyframes upNDan {
+    from{
+        top: 30%
+    }
+    to{
+        top: 70%;
+    }
+}
+
+
+@keyframes movinImg {
+    from{
+        bottom: -50px
+    }
+    to{
+        bottom: -100px;
+    }
+}
+
+@keyframes movinLowImg {
+    from{
+        top: 45%
+    }
+    to{
+        top: 55%
+    }
+}
+
+@keyframes colorChange {
+    from{
+        color: #c7c7c7;
+    }
+    to{
+        color: #1a1a1a;
+    }
+}
+
+.uk-navbar-container:not(.uk-navbar-transparent) {
+    background: transparent;
+}
+
+nav{
+    padding:0 2.5vw!important;
+    margin: 0 auto;
+    height: 130px;
+}
+
+.uk-logo>img{
+    height: 60px;
+}
+
+.uk-navbar-nav>li>a {
+    color: rgb(133, 133, 133);
+    text-transform: uppercase;
+    transition: .1s ease-in-out;
+    transition-property: color,background-color;
+}
+.uk-navbar-nav>li.uk-active>a {
+    /*color: ;*/
+}
+
+.uk-card-body{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+a.uk-text-capitalize, a.uk-text-capitalize:hover,a.uk-text-capitalize:visited,a.uk-text-capitalize:active{
+    color: #ffffff!important;
+}
+
+.uk-button-round, button{
+    border-radius: 25px;
+    color: #ffffff!important;
+}
+.w-20{
+    min-width: 20%;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.uk-card.w-100{
+    justify-content: space-between;
+    padding: 20px 20px 40px 20px;
+}
+
+.uk-card{
+    box-shadow: 0 0 20px -5px;
+}
+
+.pi{
+    height: 40%;
+    text-align: center;
+}
+
+a.uk-light{
+    color: #ffffff!important;
+    text-decoration: none!important;
+}
+
+.uk-navbar-item{
+    min-height: 20px;
+}
+
+.uk-container{
+    width: 95vw;
+    margin: 0 auto;
+    max-width: 95vw;
+    box-sizing: border-box
+}
+
+.orange{
+    background: #edcd2d;
+    color: #000;
+}
+
+.height-80{
+    min-height: 80%;
+}
+
+.border-right{
+    border-right: solid #cacaca 2px;
+    padding-right: 20px;
+    margin-right: 10px;
+}
+
+.icon-circle{
+    position: absolute;
+    display: inline-block;
+    background: #ffffff;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    right: 50%;
+    bottom: 4vh;
+    transform: translateX(50%);
+    box-shadow: 0 5px 15px rgba(167, 167, 167, 0.73);
+}
+
+.icon-circle span{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+}
+
+.icon-circle:hover span{
+    animation: upNDan 1s infinite;
+}
+
+.uk-sticky.uk-sticky-fixed.uk-sticky-below, .uk-sticky{
+    background: #ffffff;
+    box-shadow: 0 2px 20px -8px;
+}
+
+.title-box.grey{
+    background: #e4e5e5;
+}
+.title-box{
+    padding-left: 80px;
+    padding-top: 10px;
+    height: 80px;
+}
+
+.overal{
+    padding-left: 80px;
+    padding-top: 10px;
+    background: #eceded;
+    padding-bottom: 20px;
+}
+
+.uk-card-footer{
+    padding-left: 80px;
+    padding-top: 10px;
+    background: #e4e5e5;
+    padding-bottom: 20px;
+}
+
+.title-box h4{
+    font-weight: bold;
+}
+
+.overal h4{
+    font-weight: 600;
+}
+/*
+#services{
+    padding-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 80vh;
+    z-index: 2;
+    background-color: #fff;
+}
+
+#services .uk-card-title{
+    color: #000;
+    font-weight: 600;
+}
+
+.uk-card-media-top{
+    height: 150px;
+    text-align: center;
+}
+
+.uk-card-media-top img{
+    height: 100%;
+}
+
+#about{
+    padding: 100px 0;
+    min-height: 100vh;
+    background: #F4F9FD;
+}
+
+#testimonials{
+    padding: 80px 0;
+    min-height: 50vh;
+    background: url(../img/testimony.png) no-repeat left bottom;
+    background-size: cover;
+}
+
+#testimonials .uk-card{
+    background: rgba(255, 255, 255, 0.29);
+}
+
+.uk-card-title {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.uk-light{
+    color: #ffffff;!important;
+}
+footer{
+    min-height: 60px;
+}
+
+@media (min-width: 534px) {
+    .footer{
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+.cust-links>a{
+    margin-right: 20px;
+    color: #000!important;
+    text-decoration: none!important;
+}
+
+.uk-navbar-toggle{
+    animation: colorChange 3s infinite alternate;
+}
+
+.movingImageServe>img, .movingImageLow>img{
+    height: 250px;
+}
+
+.movingImageServe{
+    position: absolute;
+    transform: translateX(-60%);
+    animation: movinImg 4s infinite alternate;
+}
+
+.movingImageLow{
+    position: absolute;
+    right: 0;
+    bottom: 50%;
+    transform: translate(60%, -50%);
+    animation: movinLowImg 4s infinite alternate;
+}*/
+/*
+
+@media (max-width: 959px) {
+    .uk-navbar-nav{
+        position: fixed;
+        flex-direction: column;
+        left: 0;
+        top: 80px;
+        width: 100%;
+        !*background: #271297;*!
+        background: linear-gradient(to right, #24118b, #22cae1);
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
+    .uk-navbar-nav>li>a{
+        color: #ffffff;
+    }
+
+    .movingImageServe>img, .movingImageLow>img{
+        height: 100px;
+    }
+}*/
+
+
+/*Radio Button*/
+
+.uk-card-default{
+    background: #f9f9f9!important;
+}
+
+.uk-button-rounded{
+    border-radius: 10px;
+    background: #317aba;
+}
+
+.uk-button-rounded:hover{
+    border-radius: 10px;
+    background: #28598f;
+}
+
+.uk-input{
+    /*max-width:100px!important;*/
+    border-radius: 25px;
+    border: solid #b6b6b6 1px;
+    text-align: center;
+}
+.uk-form-controls{
+    display: inline-block;
+}
+
+.visinone{
+    visibility: hidden;
+}
+
+.pl-50{
+    border-left: solid 5px #b6b6b6;
+    padding-left: 50px;
+}
+
+.pt-20{
+    padding-top: 20px;
+}
+
+.switcher {
+    overflow: hidden;
+    display: inline-block;
+    background: #ffffff;
+    border-radius: 25px;
+    border: 1px solid grey;
+    height: 40px
+}
+.switcher input[type="radio"]:checked + label {
+    color: #ffffff;
+}
+.switcher label {
+    color: #8b8b8b;
+    padding: 0 30px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0;
+    transition: all .5s ease-in-out;
+}
+.switcher input {
+    display: none;
+}
+.switcher input[type="radio"]:checked + label {
+    background: #317aba;
+    border-radius: 25px;
+}
+.switcher .switcher-item {
+    float: left;
+}
+.switcher .switcher-item label {
+    display: inline-block;
+}
+.switcher .switcher-item label:hover {
+    cursor: pointer;
+}
+.switcher .switcher-item:first-child label {
+    -moz-border-radius: 4px 0 0 4px;
+    -webkit-border-radius: 4px;
+}
+.switcher .switcher-item:last-child label {
+    -moz-border-radius: 0 4px 4px 0;
+    -webkit-border-radius: 0;
+    border-radius: 0 4px 4px 0;
+}

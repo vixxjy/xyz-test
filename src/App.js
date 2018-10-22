@@ -1,14 +1,19 @@
+/**
+ * created by Ajor on 20-10-2018
+*/
+//=============================================================================
+
 import React, { Component } from 'react';
-import Header from "./components/Header";
-import GridBox from "./components/GridBox";
+import Main from "./components/Main";
+import Nav from "./components/Nav";
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
-        <GridBox />
+        <Nav />
+        <Main/>   
       </div>
     );
   }

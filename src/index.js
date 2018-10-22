@@ -1,18 +1,24 @@
+/**
+ * created by Ajor on 20-10-2018
+*/
+//=============================================================================
+
+
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import store from './store';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 const render = () => {
-  return ReactDOM.render(<App />, document.getElementById("root"));
+  return ReactDOM.render(
+    <Provider store={store}>
+    <App />
+    </Provider>, document.getElementById("root"));
 };
 
 render();
-// subscribing to the store
-// store.subscribe(render);
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
 serviceWorker.unregister();
